@@ -1,0 +1,34 @@
+{
+  "editor.snippetSuggestions": "top",
+  "editor.lightbulb.enabled": true,
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
+  "editor.autoClosingQuotes": "never",
+  "markdown.styles": [
+    "https://rawgit.com/easyaspi314/vscode-macOS/master/markdown.css"
+  ],
+  "workbench.editor.tabSizing": "shrink",
+  "emmet.showSuggestionsAsSnippets": true,
+  "editor.trimAutoWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  // EDITOR
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.tslint": true
+  },
+  // GIT
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  // TSLINT
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+  // SORT TYPESCRIPT IMPORTS
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.ignoreLimitWarning": true,
+  "workbench.colorCustomizations": {},
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
