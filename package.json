@@ -12,7 +12,7 @@
     "serve:ssr": "node dist/angular-marketplace/server/main.js",
     "build:ssr": "ng build --prod && ng run angular-marketplace:server:production",
     "prerender": "ng run angular-marketplace:prerender",
-    "start:heroku": "node dist/server",
+    "start:heroku": "serve:ssr",
     "postinstall": "npm run build:ssr"
   },
   "private": true,
