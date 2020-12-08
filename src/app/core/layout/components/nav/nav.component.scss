@@ -1,0 +1,32 @@
+@mixin sidenav-theme($theme) {
+  $primary: map-get($theme, primary);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  mat-sidenav-container {
+    height: 100vh;
+  }
+
+  mat-sidenav {
+    width: 16rem;
+  }
+
+  .sidenav-container {
+    height: 100%;
+  }
+
+  .sidenav {
+    width: 200px;
+  }
+
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+}
