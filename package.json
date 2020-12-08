@@ -11,7 +11,9 @@
     "dev:ssr": "ng run angular-marketplace:serve-ssr",
     "serve:ssr": "node dist/angular-marketplace/server/main.js",
     "build:ssr": "ng build --prod && ng run angular-marketplace:server:production",
-    "prerender": "ng run angular-marketplace:prerender"
+    "prerender": "ng run angular-marketplace:prerender",
+    "start:heroku": "node dist/server",
+    "postinstall": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +22,7 @@
     "@angular/common": "~11.0.3",
     "@angular/compiler": "~11.0.3",
     "@angular/core": "~11.0.3",
+    "@angular/flex-layout": "^11.0.0-beta.33",
     "@angular/forms": "~11.0.3",
     "@angular/material": "^11.0.1",
     "@angular/platform-browser": "~11.0.3",
