@@ -1,0 +1,28 @@
+/* Media queries */
+$xs-max: 599px; // xs max-width
+$sm-max: 959px; // sm max-width
+$md-max: 1279px; // md max-width
+$lg-max: 1919px; // lg max-width
+$sm-min: 600px; // sm min-width
+$md-min: 960px; // md min-width
+$lg-min: 1280px; // lg min-width
+$xl-min: 1920px; // xs min-width
+$xs-mini: 'only screen and (max-width: 399px)';
+$xs: 'only screen and (max-width: 599px)'; // ref mobiles
+$sm: 'only screen and (min-width: 600px) and (max-width: 959px)'; // ref tablets
+$md: 'only screen and (min-width: 960px) and (max-width: 1279px)'; // ref laptops
+$lg: 'only screen and (min-width: 1280px) and (max-width: 1919px)'; //ref desktop
+$xl: 'only screen and (min-width: 1920px) and (max-width: 5000px)'; // ref widescreen
+$lt-sm: 'only screen and (max-width: 599px)';
+$lt-md: 'only screen and (max-width: 959px)';
+$lt-lg: 'only screen and (max-width: 1279px)';
+$lt-xl: 'only screen and (max-width: 1919px)';
+$gt-xs: 'only screen and (min-width: 600px)';
+$gt-sm: 'only screen and (min-width: 960px)';
+$gt-md: 'only screen and (min-width: 1280px)';
+$gt-lg: 'only screen and (min-width: 1920px)';
+/* Media queries */
+
+$app-padding: 16px;
+$app-margin: 16px;
+$app-toolbar-height: 64px;

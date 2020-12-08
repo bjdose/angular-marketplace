@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@import './utils';
+@import './core';
+@import './typography';
+@import '~@angular/material/theming';
+
+// Override the typography in the core CSS.
+@include mat-core($custom-typography);
+
+/************************
+ Theming section
+************************/
+
+// Custom themable components
+@import '../app/core/layout/components/nav/nav.component';
+@mixin custom-components-theme($theme) {
+  @include sidenav-theme($theme);
+}
+
+// Light theme
+$light-primary: mat-palette($mat-indigo);
+$light-accent: mat-palette($mat-pink, A200, A100, A400);
+$light-theme: mat-light-theme($light-primary, $light-accent);
+
+@media (prefers-color-scheme: light) {
+  @include angular-material-theme($light-theme);
+  @include custom-components-theme($light-theme);
+}
+
+// Dark theme
+$dark-primary: mat-palette($mat-teal);
+$dark-accent: mat-palette($mat-blue-gray, A200, A100, A400);
+$dark-warn: mat-palette($mat-deep-orange);
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+@media (prefers-color-scheme: dark) {
+  @include angular-material-theme($dark-theme);
+  @include custom-components-theme($dark-theme);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+img {
+  border-radius: 4px;
+  background-color: white;
+}
+
+.main-toolbar {
+  height: $app-toolbar-height;
+}

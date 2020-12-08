@@ -1,0 +1,38 @@
+@import './variables';
+@import './mixins';
+
+.container {
+  margin: 0 auto;
+  height: calc(100% - #{$app-toolbar-height});
+}
+
+@include query(xs) {
+  .container {
+    width: 93%;
+  }
+}
+
+@include query(sm) {
+  .container {
+    width: 680px;
+    max-width: 95vw;
+  }
+}
+
+@include query(md) {
+  .container {
+    width: 960px;
+  }
+}
+
+@include query(lg) {
+  .container {
+    width: 1080px;
+  }
+}
+
+@include query(xl) {
+  .container {
+    width: 1080px;
+  }
+}

@@ -1,0 +1,74 @@
+@import './variables';
+
+.fw {
+  width: 100%;
+}
+
+.fh {
+  height: 100%;
+}
+
+.fvh {
+  height: 100vh;
+}
+
+.fvw {
+  height: 100vw;
+}
+
+.margin-bottom {
+  margin-bottom: $app-margin !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.padding {
+  padding: $app-padding !important;
+}
+
+.margin {
+  margin: $app-margin !important;
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.responsive {
+  max-width: 100%;
+  max-height: auto;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  @extend .flex;
+  align-items: center;
+}
+
+.flex-full {
+  @extend .flex-center;
+  @extend .jc-c;
+}
+
+.clamp {
+  /*! autoprefixer: off */
+  -webkit-box-orient: vertical;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  word-wrap: break-word !important;
+  -webkit-line-clamp: 1 !important;
+}
