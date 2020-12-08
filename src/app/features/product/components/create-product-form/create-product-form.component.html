@@ -1,0 +1,42 @@
+<form
+  fxLayout="column"
+  fxLayoutGap="15px"
+  [formGroup]="form"
+  (ngSubmit)="submit()"
+>
+  <app-input-field
+    fxFlex
+    controlName="name"
+    placeholder="Nombre"
+    type="text"
+    [minLength]="2"
+    [maxLength]="25"
+    [formGroup]="form"
+  ></app-input-field>
+  <app-input-field
+    fxFlex
+    controlName="sku"
+    placeholder="SKU"
+    type="text"
+    [minLength]="2"
+    [maxLength]="25"
+    [formGroup]="form"
+  ></app-input-field>
+  <app-input-field
+    fxFlex
+    controlName="quantity"
+    placeholder="Cantidad"
+    type="number"
+    [minLength]="2"
+    [maxLength]="25"
+    [formGroup]="form"
+  ></app-input-field>
+  <app-input-field
+    fxFlex
+    controlName="price"
+    placeholder="Precio"
+    type="number"
+    [formGroup]="form"
+  ></app-input-field>
+  <button fxFlex mat-raised-button color="primary" type="submit">Crear</button>
+</form>

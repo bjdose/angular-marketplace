@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>{{ stepper.getStepLabel() }}</h2>
+<mat-dialog-content class="mat-typography">
+  <app-stepper #stepper></app-stepper>
+</mat-dialog-content>
+<mat-dialog-actions align="end" *ngIf="stepper.isFirsStep()">
+  <button mat-button (click)="stepper.goSignInStep()">INICIAR SESIÓN</button>
+  <button mat-button (click)="stepper.goSignUpStep()" cdkFocusInitial>
+    REGÍSTRATE
+  </button>
+</mat-dialog-actions>

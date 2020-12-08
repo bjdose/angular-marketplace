@@ -1,0 +1,14 @@
+<mat-selection-list>
+  <div mat-subheader>
+    {{ data.subheader }}
+  </div>
+  <mat-slider
+    thumbLabel
+    class="fw"
+    [tickInterval]="data.tickInterval"
+    [min]="data.min"
+    [max]="data.max"
+    [displayWith]="data.displayWith"
+    (change)="change($event)"
+  ></mat-slider>
+</mat-selection-list>

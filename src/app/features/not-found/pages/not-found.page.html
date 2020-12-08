@@ -1,0 +1,21 @@
+<div class="container fh" fxLayout="column" fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <img
+      src="assets/images/not-found.svg"
+      alt="Imagen de resultados no encontrados"
+      class="margin-bottom responsive"
+      width="150px"
+      height="150px"
+    />
+    <h1>¡Lo sentimos!</h1>
+    <h3>No pudimos encontrar la página que estas buscando</h3>
+    <button
+      mat-button
+      color="primary"
+      routerLinkActive="router-link-active"
+      [routerLink]="['/']"
+    >
+      Volver al inicio
+    </button>
+  </div>
+</div>

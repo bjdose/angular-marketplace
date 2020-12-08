@@ -1,0 +1,15 @@
+<div
+  class="container padding"
+  fxLayout="column"
+  fxLayoutAlign="start"
+  fxLayoutGap="30px"
+>
+  <mat-toolbar>
+    <span class="spacer"></span>
+    <button mat-button>Crear</button>
+  </mat-toolbar>
+  <app-table
+    [tableData]="products$ | async"
+    [tableCols]="tableCols"
+  ></app-table>
+</div>

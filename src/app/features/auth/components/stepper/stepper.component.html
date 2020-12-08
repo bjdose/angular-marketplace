@@ -1,0 +1,11 @@
+<mat-horizontal-stepper>
+  <mat-step label="Crear una cuenta">
+    <app-auth-selection></app-auth-selection>
+  </mat-step>
+  <mat-step label="Iniciar sesión">
+    <app-sign-in (goToSignUp)="goSignUpStep()"></app-sign-in>
+  </mat-step>
+  <mat-step label="Crear una cuenta">
+    <app-sign-up (goToSignIn)="goSignInStep()"></app-sign-up>
+  </mat-step>
+</mat-horizontal-stepper>

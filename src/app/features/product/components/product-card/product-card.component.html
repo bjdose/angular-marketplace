@@ -1,0 +1,14 @@
+<mat-card>
+  <img
+    src="https://picsum.photos/75/75"
+    alt="Imagen del producto"
+    class="responsive flex"
+    height="75px"
+    width="75px"
+  />
+  <mat-card-header>
+    <mat-card-title class="clamp">{{ product.name }}</mat-card-title>
+    <mat-card-subtitle>{{ product.sku }}</mat-card-subtitle>
+    <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

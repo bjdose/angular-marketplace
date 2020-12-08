@@ -1,0 +1,39 @@
+<div
+  class="container padding"
+  fxLayout="column"
+  fxLayoutAlign="start"
+  fxLayoutGap="30px"
+  fxLayoutGap.xs="0px"
+>
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap="30px"
+    fxLayoutGap.xs="15px"
+  >
+    <div fxFlex="25%" fxFlex.xs>
+      <div fxLayout="column">
+        <mat-toolbar class="small-words">
+          <span> {{ (currentUser$ | async)?.userType | appUserType }} </span>
+        </mat-toolbar>
+        <app-product-filter
+          [productFilterItems]="productFilterItems"
+          (resetAll)="onResetFilters()"
+        ></app-product-filter>
+      </div>
+    </div>
+    <div fxFlex="75%" fxFlex.xs>
+      <div fxLayout="column">
+        <div fxLayout="row wrap" fxLayoutGap="15px grid" fxLayoutAlign="start">
+          <app-product-card
+            fxFlex="33.33%"
+            fxFlex.sm="50%"
+            fxFlex.xs="100%"
+            *ngFor="let product of filteredProducts; trackBy: trackBySku"
+            [product]="product"
+          ></app-product-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

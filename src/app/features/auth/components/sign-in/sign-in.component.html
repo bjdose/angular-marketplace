@@ -1,0 +1,44 @@
+<div class="fw" fxLayout="column" fxLayoutAlign="center center">
+  <mat-card fxLayout="column" fxLayoutAlign="center center" class="no-padding">
+    <mat-card-content>
+      <form
+        fxLayout="column"
+        fxLayoutGap="15px"
+        [formGroup]="form"
+        (ngSubmit)="submitForm()"
+      >
+        <app-input-field
+          fxFlex
+          controlName="email"
+          placeholder="Correo electrónico"
+          type="email"
+          [minLength]="2"
+          [maxLength]="25"
+          [formGroup]="form"
+        ></app-input-field>
+        <app-input-field
+          fxFlex
+          controlName="password"
+          placeholder="Contraseña"
+          type="password"
+          [minLength]="2"
+          [maxLength]="15"
+          [formGroup]="form"
+        ></app-input-field>
+        <button fxFlex mat-raised-button color="primary" type="submit">
+          Iniciar sesión
+        </button>
+        <button
+          fxFlex
+          mat-button
+          color="accent"
+          class="underline"
+          type="button"
+          (click)="goToSignUpStep()"
+        >
+          Regístrarse
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

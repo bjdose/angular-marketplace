@@ -1,0 +1,27 @@
+<mat-toolbar class="no-padding">
+  <form [formGroup]="form" class="fw">
+    <mat-form-field class="fw" appearance="fill">
+      <mat-label>Escribe para buscar...</mat-label>
+      <mat-icon matPrefix>search</mat-icon>
+      <input
+        matInput
+        #searchbarInput
+        type="search"
+        placeholder="Nombre del producto o SKU"
+        formControlName="query"
+      />
+      <button
+        mat-button
+        matSuffix
+        mat-icon-button
+        (click)="reset()"
+        *ngIf="searchbarInput.value"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-error *ngIf="form.controls.query.errors?.noResults">
+        No resultados encontrados
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-toolbar>

@@ -1,0 +1,72 @@
+<div
+  class="container"
+  fxLayout="column"
+  fxLayoutGap="15px"
+  fxLayoutAlign="center center"
+>
+  <mat-card
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    ngClass.xs="padding"
+    ngClass.sm="padding"
+  >
+    <mat-card-content>
+      <div
+        fxLayout="column"
+        fxLayout.gt-sm="row"
+        fxLayoutGap="30px"
+        fxLayoutAlign="center center"
+        ngClass.gt-sm="padding"
+      >
+        <div fxFlex="60%">
+          <img
+            src="https://picsum.photos/500/250"
+            alt="Imagen principal"
+            class="responsive"
+            width="500px"
+            height="250px"
+          />
+        </div>
+        <div fxFlex>
+          <section fxLayout="column">
+            <h1 fxFlex class="mat-headline">Crea tu producto</h1>
+            <h2 fxFlex>Organiza de manera profesional tu inventario</h2>
+            <div fxFlex>
+              <div
+                fxLayout="row"
+                fxLayout.xs-sm="column"
+                fxLayoutGap.gt-sm="15px"
+                fxLayoutGap="30px"
+              >
+                <button
+                  fxFlex
+                  mat-button
+                  class="underline"
+                  color="accent"
+                  (click)="buyProducts()"
+                >
+                  Comprar productos
+                </button>
+                <button
+                  fxFlex
+                  mat-raised-button
+                  color="primary"
+                  (click)="createProduct()"
+                >
+                  Crear producto
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <div fxLayout="row">
+    <div fxFlex fxLayoutAlign="center center">
+      <button mat-button color="accent">
+        Inicia sesión para ver tu inventario
+      </button>
+    </div>
+  </div>
+</div>

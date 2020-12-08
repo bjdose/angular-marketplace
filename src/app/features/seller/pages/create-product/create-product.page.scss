@@ -1,0 +1,19 @@
+@import '~theme/mixins';
+
+:host ::ng-deep {
+  mat-card {
+    width: 400px;
+  }
+  mat-card-content,
+  mat-card-header {
+    width: 100%;
+  }
+
+  @include query(xs) {
+    mat-card,
+    mat-card-content,
+    mat-card-header {
+      width: 100%;
+    }
+  }
+}

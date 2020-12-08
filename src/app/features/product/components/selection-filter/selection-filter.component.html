@@ -1,0 +1,8 @@
+<mat-selection-list #matSelectionList (selectionChange)="change($event)">
+  <div mat-subheader>
+    {{ data.subheader }}
+  </div>
+  <mat-list-option [value]="option.value" *ngFor="let option of data.options">
+    {{ option.label }}
+  </mat-list-option>
+</mat-selection-list>
