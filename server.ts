@@ -17,6 +17,12 @@ export function app(): express.Express {
     ? 'index.original.html'
     : 'index';
 
+  server.use(compression());
+  server.use(cookieparser());
+  server.use(cors());
+  server.use(express.json());
+  server.use(express.urlencoded({ extended: true }));
+
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine(
     'html',
@@ -54,12 +60,6 @@ function run(): void {
 
   // Start up the Node server
   const server = app();
-
-  server.use(compression());
-  server.use(cookieparser());
-  server.use(cors());
-  server.use(express.json());
-  server.use(express.urlencoded({ extended: true }));
 
   server.listen(port, () => {
     // tslint:disable-next-line: no-console
