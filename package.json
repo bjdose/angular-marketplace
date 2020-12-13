@@ -11,7 +11,8 @@
     "build:ssr": "ng build --prod && ng run angular-marketplace:server:production",
     "serve:ssr": "node dist/angular-marketplace/server/main.js",
     "postinstall": "npm run build:ssr",
-    "start:heroku": "npm run serve:ssr"
+    "start:heroku": "npm run serve:ssr",
+    "heroku-postbuild": "echo skip build script on Heroku"
   },
   "private": true,
   "dependencies": {
