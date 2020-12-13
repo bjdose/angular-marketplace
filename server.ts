@@ -1,6 +1,8 @@
 import { APP_BASE_HREF } from '@angular/common';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as compression from 'compression';
+import * as cookieparser from 'cookie-parser';
+import * as cors from 'cors';
 import * as express from 'express';
 import { existsSync } from 'fs';
 import { join } from 'path';
@@ -54,6 +56,10 @@ function run(): void {
   const server = app();
 
   server.use(compression());
+  server.use(cookieparser());
+  server.use(cors());
+  server.use(express.json());
+  server.use(express.urlencoded({ extended: true }));
 
   server.listen(port, () => {
     // tslint:disable-next-line: no-console
