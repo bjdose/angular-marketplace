@@ -12,7 +12,7 @@ import {
 } from '@app/core/authentication';
 import { UserType } from '@app/core/enums';
 import { RegisterUser, Session } from '@app/core/models';
-import { ValidatorService } from '@app/core/services';
+import { ValidatorService } from '@app/core/services/form-validator.service';
 import { Subscription } from 'rxjs';
 
 @Component({

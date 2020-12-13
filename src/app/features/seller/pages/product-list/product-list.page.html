@@ -6,7 +6,9 @@
 >
   <mat-toolbar>
     <span class="spacer"></span>
-    <button mat-button>Crear</button>
+    <button mat-button [routerLink]="['/' + appRoutes.createProduct]">
+      Crear
+    </button>
   </mat-toolbar>
   <app-table
     [tableData]="products$ | async"

@@ -39,6 +39,6 @@ export class CreateProductPage implements OnDestroy {
   }
 
   productCreated(): void {
-    this.router.navigateByUrl(`${appRoutes.productList}/${this.user?.id}`);
+    this.router.navigateByUrl(appRoutes.productList);
   }
 }

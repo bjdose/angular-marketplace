@@ -13,7 +13,7 @@ const routes: Routes = [
         component: CreateProductPage,
       },
       {
-        path: `${appRoutes.list}/:userId`,
+        path: appRoutes.list,
         component: ProductListPage,
         resolve: {
           products: ProductListByUserResolver,

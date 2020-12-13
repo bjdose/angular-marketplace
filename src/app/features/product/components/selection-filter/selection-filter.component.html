@@ -2,7 +2,11 @@
   <div mat-subheader>
     {{ data.subheader }}
   </div>
-  <mat-list-option [value]="option.value" *ngFor="let option of data.options">
+  <mat-list-option
+    class="clamp"
+    [value]="option.value"
+    *ngFor="let option of data.options"
+  >
     {{ option.label }}
   </mat-list-option>
 </mat-selection-list>

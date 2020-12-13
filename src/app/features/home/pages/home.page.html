@@ -43,7 +43,7 @@
                   mat-button
                   class="underline"
                   color="accent"
-                  (click)="buyProducts()"
+                  [routerLink]="['/' + appRoutes.productSearch]"
                 >
                   Comprar productos
                 </button>
@@ -51,7 +51,7 @@
                   fxFlex
                   mat-raised-button
                   color="primary"
-                  (click)="createProduct()"
+                  [routerLink]="['/' +  appRoutes.createProduct]"
                 >
                   Crear producto
                 </button>
@@ -62,9 +62,9 @@
       </div>
     </mat-card-content>
   </mat-card>
-  <div fxLayout="row">
+  <div fxLayout="row" *appNoSession>
     <div fxFlex fxLayoutAlign="center center">
-      <button mat-button color="accent">
+      <button mat-button color="accent" (click)="login()">
         Inicia sesión para ver tu inventario
       </button>
     </div>

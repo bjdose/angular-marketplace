@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material/stepper';
 
 @Component({
@@ -6,12 +6,8 @@ import { MatStepper } from '@angular/material/stepper';
   templateUrl: './stepper.component.html',
   styleUrls: ['./stepper.component.scss'],
 })
-export class StepperComponent implements OnInit {
+export class StepperComponent {
   @ViewChild(MatStepper, { static: false }) private stepper!: MatStepper;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   goSignInStep(): void {
     this.stepper.selectedIndex = 1;

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { appRoutes } from '@app/core/config';
 import { Product } from '@app/core/models';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,6 +11,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./product-list.page.scss'],
 })
 export class ProductListPage {
+  appRoutes = appRoutes;
   products$: Observable<Product[]> = this.route.data.pipe(
     map((data) => data.products)
   );

@@ -11,7 +11,7 @@ import {
   SessionService,
 } from '@app/core/authentication';
 import { LoginUser, Session } from '@app/core/models';
-import { ValidatorService } from '@app/core/services';
+import { ValidatorService } from '@app/core/services/form-validator.service';
 import { Subscription } from 'rxjs';
 
 @Component({

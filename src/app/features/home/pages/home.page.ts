@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { appRoutes } from '@app/core/config';
+import { UserType } from '@app/core/enums';
+import { AuthDialogService } from '@app/core/services';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +9,11 @@ import { appRoutes } from '@app/core/config';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage {
-  constructor(private router: Router) {}
+  userType = UserType;
+  appRoutes = appRoutes;
+  constructor(private auth: AuthDialogService) {}
 
-  buyProducts(): void {
-    this.router.navigateByUrl(appRoutes.productSearch);
-  }
-
-  createProduct(): void {
-    // redirect to create product route and this route is protected
-    // if user is not authenticated we must show AuthDialogComponent
-    this.router.navigateByUrl(appRoutes.createProduct);
+  login(): void {
+    this.auth.openDialog();
   }
 }
