@@ -163,20 +163,6 @@
           "configurations": {
             "production": {}
           }
-        },
-        "app-shell": {
-          "builder": "@angular-devkit/build-angular:app-shell",
-          "options": {
-            "browserTarget": "angular-marketplace:build",
-            "serverTarget": "angular-marketplace:server",
-            "route": "shell"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "angular-marketplace:build:production",
-              "serverTarget": "angular-marketplace:server:production"
-            }
-          }
         }
       }
     }
