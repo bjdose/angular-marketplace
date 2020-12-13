@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, CanLoad, Router } from '@angular/router';
+import { appRoutes } from '../config';
 import { UserService } from '../services';
 
 @Injectable({ providedIn: 'root' })
@@ -9,7 +10,7 @@ export class AdminGuard implements CanActivate, CanLoad {
   isAdmin(): boolean {
     const isAdmin = this.user.isAdmin();
     if (!isAdmin) {
-      this.router.navigateByUrl('/');
+      this.router.navigateByUrl(appRoutes.home);
       return false;
     }
     return true;

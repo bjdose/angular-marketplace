@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { SessionService } from '@app/core/authentication';
+import { AuthDialogComponent } from '@app/features/auth';
 import { filter, first } from 'rxjs/operators';
-import { AuthDialogComponent } from '../components';
+import { SessionService } from '../authentication/session.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthDialogService {

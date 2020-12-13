@@ -1,3 +1,5 @@
+@import '~theme/mixins';
+
 @mixin sidenav-theme($theme) {
   $primary: map-get($theme, primary);
   $warn: map-get($theme, warn);
@@ -17,7 +19,7 @@
   }
 
   .sidenav {
-    width: 200px;
+    width: 300px;
   }
 
   .sidenav .mat-toolbar {
@@ -28,5 +30,11 @@
     position: sticky;
     top: 0;
     z-index: 1;
+  }
+
+  @include query(xs) {
+    .sidenav {
+      width: 70vw;
+    }
   }
 }

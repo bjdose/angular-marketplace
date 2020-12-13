@@ -4,14 +4,25 @@ import {
   AuthLayoutComponent,
   MainLayoutComponent,
   NavComponent,
+  SpinnerComponent,
 } from './components';
+import {
+  AppShellNoRenderDirective,
+  AppShellRenderDirective,
+} from './directives';
 import { LayoutRoutingModule } from './layout.routing.module';
 
-const components = [NavComponent, AuthLayoutComponent, MainLayoutComponent];
+const directives = [AppShellNoRenderDirective, AppShellRenderDirective];
+const components = [
+  NavComponent,
+  AuthLayoutComponent,
+  MainLayoutComponent,
+  SpinnerComponent,
+];
 const modules = [LayoutRoutingModule, SharedModule];
 
 @NgModule({
   imports: [modules],
-  declarations: [components],
+  declarations: [components, directives],
 })
 export class LayoutModule {}

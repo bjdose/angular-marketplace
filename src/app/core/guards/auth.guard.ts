@@ -6,9 +6,10 @@ import {
   Router,
 } from '@angular/router';
 import { SessionService } from '@app/core/authentication';
-import { AuthDialogService } from '@app/features/auth';
+import { AuthDialogService } from '@app/core/services';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { appRoutes } from '../config';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
@@ -42,7 +43,7 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
   }
 
   private noAuthHandler(): void {
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl(appRoutes.home);
     this.auth.openDialog();
   }
 }

@@ -24,7 +24,6 @@ export class HttpErrorInterceptor implements HttpInterceptor {
     this.loading.openDialog();
     return next.handle(request).pipe(
       catchError((error: HttpErrorResponse) => {
-        // TODO: handle backend errors..
         this.error.openDialog(
           error.message ?? JSON.stringify(error),
           error.status

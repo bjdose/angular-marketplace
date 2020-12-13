@@ -13,4 +13,5 @@ export interface AppRoutes {
   customer: string;
   search: string;
   productSearch: string;
+  home: string;
 }

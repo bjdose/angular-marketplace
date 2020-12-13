@@ -18,7 +18,7 @@ export class LoadingDialogService {
       this.dialogRef = this.dialog.open(LoadingDialogComponent, {
         data: undefined,
         maxHeight: '100%',
-        width: '400px',
+        width: '500px',
         maxWidth: '100%',
         disableClose: true,
         hasBackdrop: true,

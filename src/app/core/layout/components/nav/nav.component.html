@@ -2,14 +2,14 @@
   <mat-sidenav #drawer class="sidenav">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a
-        mat-list-item
-        (click)="logout(); drawer.close()"
-        *ngIf="currentUser$ | async"
-        >Cerrar sesión</a
-      >
+      <ng-container *ngFor="let menu of menuLinks; trackBy: trackByMenuLabel">
+        <a
+          mat-list-item
+          (click)="menu.action(); drawer.close()"
+          *ngIf="menu.visible()"
+          >{{ menu.label }}</a
+        >
+      </ng-container>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -24,7 +24,7 @@
       </button>
       <button
         mat-button
-        [routerLink]="['/']"
+        [routerLink]="[appRoutes.home]"
         routerLinkActive="router-link-active"
       >
         Angular Marketplace

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, share } from 'rxjs/operators';
+import { appRoutes } from '../config';
+import { UserType } from '../enums';
 import { StorageKeys } from '../enums/storage-keys.enum';
 import { Session } from '../models/session.model';
 import { User } from '../models/user.model';
@@ -70,6 +72,11 @@ export class SessionService {
 
   logout(): void {
     this.removeCurrentSession();
-    this.router.navigate(['/']);
+    this.router.navigate([appRoutes.home]);
+  }
+
+  checkUserTypes(userTypes: UserType[]): boolean {
+    const currentUser: User | null = this.getCurrentUser();
+    return userTypes.some((userType) => userType === currentUser?.userType);
   }
 }

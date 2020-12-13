@@ -1,3 +1,4 @@
+export * from './auth-dialog.service';
 export * from './config.service';
 export * from './error-dialog.service';
 export * from './event-dispatcher.service';
@@ -6,4 +7,5 @@ export * from './global-errors.service';
 export * from './loading-dialog.service';
 export * from './local-storage.service';
 export * from './message-dialog.service';
+export * from './nav.service';
 export * from './user.service';
