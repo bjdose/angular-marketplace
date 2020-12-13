@@ -4,21 +4,24 @@ import {
   BrowserTransferStateModule,
 } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app.routing.module';
 import { CoreModule } from './core';
-import { RouterModule } from '@angular/router';
+/* TransferHttpCacheModule, StateTransferInitializerModule */
+
+const routes: Routes = [];
 
 @NgModule({
-  declarations: [AppComponent],
   imports: [
-    AppRoutingModule,
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabled',
+    }),
     BrowserAnimationsModule,
     BrowserTransferStateModule,
     BrowserModule.withServerTransition({ appId: 'angular-marketplace' }),
     CoreModule.forRoot(),
-    RouterModule,
   ],
+  declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

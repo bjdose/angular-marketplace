@@ -8,12 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev:ssr": "ng run angular-marketplace:serve-ssr",
-    "serve:ssr": "node dist/angular-marketplace/server/main.js",
     "build:ssr": "ng build --prod && ng run angular-marketplace:server:production",
-    "prerender": "ng run angular-marketplace:prerender",
-    "start:heroku": "npm run serve:ssr",
-    "postinstall": "npm run build:ssr"
+    "serve:ssr": "node dist/angular-marketplace/server/main.js",
+    "postinstall": "npm run build:ssr",
+    "start:heroku": "npm run serve:ssr"
   },
   "private": true,
   "dependencies": {
@@ -30,6 +28,8 @@
     "@angular/platform-server": "~11.0.3",
     "@angular/router": "~11.0.3",
     "@nguniversal/express-engine": "^11.0.0",
+    "@types/compression": "^1.7.0",
+    "compression": "^1.7.4",
     "express": "^4.15.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
