@@ -9,6 +9,11 @@ import {
   MessageDialogComponent,
   TableComponent,
 } from './components';
+import {
+  NoSessionDirective,
+  SessionDirective,
+  UserTypeDirective,
+} from './directives';
 import { MaterialModule } from './modules';
 import { UserTypePipe } from './pipes';
 
@@ -27,10 +32,11 @@ const components = [
   TableComponent,
 ];
 const pipes = [UserTypePipe];
+const directives = [UserTypeDirective, SessionDirective, NoSessionDirective];
 
 @NgModule({
   imports: [modules],
-  exports: [modules, components, pipes],
-  declarations: [components, pipes],
+  exports: [modules, components, pipes, directives],
+  declarations: [components, pipes, directives],
 })
 export class SharedModule {}
